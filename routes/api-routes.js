@@ -20,6 +20,9 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
     db.User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      title: req.body.title,
       email: req.body.email,
       password: req.body.password
     })
@@ -51,4 +54,18 @@ module.exports = function(app) {
       });
     }
   });
+
+
+// Route for getting client info
+app.get("/api/client/:info", function(req, res) {
+  Client.findAll({
+    where: {
+      title: req.params.info
+    }
+  }).then(function(results) {
+    res.json(results);
+  });
+});
+
+
 };
