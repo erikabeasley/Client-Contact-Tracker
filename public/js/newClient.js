@@ -3,45 +3,48 @@ $(document).ready(() => {
   const createNewForm = $("form.createNew");
   const firstNameInput = $("input#firstName-input");
   const lastNameInput = $("input#lastName-input");
-  const titleSelect = $("select#title-select");
+  const titleInput = $("input#title-input");
   const emailInput = $("input#email-input");
   const phoneNumberInput = $("input#phoneNumber-input");
   const companyInput = $("input#company-input");
 
   // When the createNew button is clicked, we validate the email and password are not blank
   createNewForm.on("submit", (event) => {
+    console.log("submit");
     event.preventDefault();
-    const userData = {
+
+    const clientData = {
       firstName: firstNameInput.val().trim(),
       lastName: lastNameInput.val().trim(),
-      title: titleSelect.val().trim(), //probably don't need this
+      title: titleInput.val(), //probably don't need this
       email: emailInput.val().trim(),
       phoneNumber: phoneNumberInput.val().trim(),
-      company: companyInput.val().trim()
+      company: companyInput.val().trim(),
     };
 
+    console.log(clientData);
     if (
-      !userData.firstName ||
-      !userData.lastName ||
-      !userData.title ||
-      !userData.email ||
-      !userData.phoneNumber ||
-      !userData.company
+      !clientData.firstName ||
+      !clientData.lastName ||
+      !clientData.title ||
+      !clientData.email ||
+      !clientData.phoneNumber ||
+      !clientData.company
     ) {
       return;
     }
     // If we have an email and password, run the createNewUser function
     createNewClient(
-      userData.firstName,
-      userData.lastName,
-      userData.title,
-      userData.email,
-      userData.phoneNumber,
-      userData.company
+      clientData.firstName,
+      clientData.lastName,
+      clientData.title,
+      clientData.email,
+      clientData.phoneNumber,
+      clientData.company
     );
     firstNameInput.val("");
     lastNameInput.val("");
-    titleSelect.val("");
+    titleInput.val("");
     emailInput.val("");
     companyInput.val("");
     phoneNumberInput.val("");
