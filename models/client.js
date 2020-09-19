@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     phoneNumber: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         len: [10]
