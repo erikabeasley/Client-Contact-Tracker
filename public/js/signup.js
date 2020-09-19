@@ -18,11 +18,23 @@ $(document).ready(() => {
       password: passwordInput.val().trim()
     };
 
-    if (!userData.fname || !userData.lname || !userData.job || !userData.email || !userData.password) {
+    if (
+      !userData.fname ||
+      !userData.lname ||
+      !userData.job ||
+      !userData.email ||
+      !userData.password
+    ) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.fname, userData.lname, userData.job, userData.email, userData.password);
+    signUpUser(
+      userData.fname,
+      userData.lname,
+      userData.job,
+      userData.email,
+      userData.password
+    );
     fnameInput.val("");
     lnameInput.val("");
     jobSelect.val("");
