@@ -1,9 +1,9 @@
 $(document).ready(() => {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
-  const fnameInput = $("input#fname-input");
-  const lnameInput = $("input#lname-input");
-  const jobSelect = $("select#job-select");
+  const firstNameInput = $("input#firstName-input");
+  const lastNameInput = $("input#lastName-input");
+  const titleSelect = $("select#title-select");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
@@ -11,32 +11,44 @@ $(document).ready(() => {
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
-      fname: fnameInput.val().trim(),
-      lname: lnameInput.val().trim(),
-      job: jobSelect.val().trim(), //probably don't need this
+      firstName: firstNameInput.val().trim(),
+      lastName: lastNameInput.val().trim(),
+      title: titleSelect.val().trim(), //probably don't need this
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
 
-    if (!userData.fname || !userData.lname || !userData.job || !userData.email || !userData.password) {
+    if (
+      !userData.firstName ||
+      !userData.lastName ||
+      !userData.title ||
+      !userData.email ||
+      !userData.password
+    ) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.fname, userData.lname, userData.job, userData.email, userData.password);
-    fnameInput.val("");
-    lnameInput.val("");
-    jobSelect.val("");
+    signUpUser(
+      userData.firstName,
+      userData.lastName,
+      userData.title,
+      userData.email,
+      userData.password
+    );
+    firstNameInput.val("");
+    lastNameInput.val("");
+    titleSelect.val("");
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(fname, lname, job, email, password) {
+  function signUpUser(firstName, lastName, title, email, password) {
     $.post("/api/signup", {
-      fname: fname,
-      lname: lname,
-      job: job,
+      firstName: firstName,
+      lastName: lastName,
+      title: title,
       email: email,
       password: password
     })
