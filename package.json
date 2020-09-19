@@ -1,7 +1,7 @@
 {
   "name": "1-Passport-Example",
   "version": "1.0.0",
-  "description": "",
+  "description": "- An application that tracks the contact points made by employees of an orginization. It allows the user to create new contacts, keep track of existing contacts, and stale inactive contacts. Additionally, the application keeps track of sent messages between contacts, and allows the user to add notes detailing conversations. The objective of this application is to create a cohesive space where the user can maintain record of contacts and conversations to avoid overlap, and allow collaboration.",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.2.6",
     "bcryptjs": "2.4.3",
     "express": "^4.17.0",
     "express-session": "^1.16.1",
@@ -31,5 +32,13 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santu14/Client-Contact-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santu14/Client-Contact-Tracker/issues"
+  },
+  "homepage": "https://github.com/santu14/Client-Contact-Tracker#readme"
 }
