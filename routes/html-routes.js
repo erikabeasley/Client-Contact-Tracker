@@ -26,4 +26,9 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  // After selecting client on members page, you are then taken to client page where you can get info
+  app.get("/client", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/client.html"));
+  });
 };
