@@ -1,21 +1,23 @@
 $(document).ready(() => {
   // Getting references to our form and input
-  const signUpForm = $("form.signup");
+  const createNewForm = $("form.createNew");
   const firstNameInput = $("input#firstName-input");
   const lastNameInput = $("input#lastName-input");
   const titleSelect = $("select#title-select");
   const emailInput = $("input#email-input");
-  const passwordInput = $("input#password-input");
+  const phoneNumberInput = $("input#phoneNumber-input");
+  const companyInput = $("input#company-input");
 
-  // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", event => {
+  // When the createNew button is clicked, we validate the email and password are not blank
+  createNewForm.on("submit", (event) => {
     event.preventDefault();
     const userData = {
       firstName: firstNameInput.val().trim(),
       lastName: lastNameInput.val().trim(),
       title: titleSelect.val().trim(), //probably don't need this
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      phoneNumber: phoneNumberInput.val().trim(),
+      company: companyInput.val().trim()
     };
 
     if (
@@ -23,34 +25,45 @@ $(document).ready(() => {
       !userData.lastName ||
       !userData.title ||
       !userData.email ||
-      !userData.password
+      !userData.phoneNumber ||
+      !userData.company
     ) {
       return;
     }
-    // If we have an email and password, run the signUpUser function
-    signUpUser(
+    // If we have an email and password, run the createNewUser function
+    createNewClient(
       userData.firstName,
       userData.lastName,
       userData.title,
       userData.email,
-      userData.password
+      userData.phoneNumber,
+      userData.company
     );
     firstNameInput.val("");
     lastNameInput.val("");
     titleSelect.val("");
     emailInput.val("");
-    passwordInput.val("");
+    companyInput.val("");
+    phoneNumberInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the createNew route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(firstName, lastName, title, email, password) {
-    $.post("/api/signup", {
+  function createNewClient(
+    firstName,
+    lastName,
+    title,
+    email,
+    phoneNumber,
+    company
+  ) {
+    $.post("/api/createNew", {
       firstName: firstName,
       lastName: lastName,
       title: title,
       email: email,
-      password: password
+      phoneNumber: phoneNumber,
+      company: company
     })
       .then(() => {
         window.location.replace("/members");
