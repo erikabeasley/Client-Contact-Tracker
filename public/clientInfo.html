@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Passport Authentication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/logout">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Client Information <span class="contact-info"></span></h2>
+            </div>
+        </div>
+        <br>
+        <form>
+            <div class="infoForm-group row">
+                <label for="staticFirstName" class="col-sm-2 col-form-label">First Name</label> <!-- Need to make it so all the info appears when we get to clientInfo page -->
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="staticFirstName">
+                </div>
+            </div>
+            <br>
+            <div class="infoForm-group row">
+                <label for="staticLastName" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="staticLastName">
+                </div>
+            </div>
+            <br>
+            <div class="infoForm-group row">
+                <label for="staticCompany" class="col-sm-2 col-form-label">Company</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="staticCompany">
+                </div>
+            </div>
+            <br>
+            <div class="infoForm-group row">
+                <label for="staticTitle" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="staticTitle">
+                </div>
+            </div>
+            <br>
+            <div class="infoForm-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="staticEmail">
+                </div>
+                <a class="nav-link" href="#"><i ria-hidden="true">Email</i>    <!-- Trying to make new email popup when click on client email -->
+                </a>
+            </div>
+            <br>
+            <div class="infoForm-group row">
+                <label for="staticPhoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+                <div class="col-sm-8">
+                    <input type="numeric" class="form-control" id="staticPhoneNumber">
+                </div>
+            </div>
+        </form>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/clientInfo.js"></script>
+
+</body>
+
+</html>

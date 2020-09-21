@@ -35,8 +35,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  // After selecting client on members page, you are then taken to client page where you can get info
-  app.get("/client", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/client.html"));
+  // After selecting client on members page, you are then taken to client page where you can get contact info
+  app.get("/clientInfo", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/clientInfo.html"));
   });
+
+  // 
 };
