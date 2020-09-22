@@ -26,9 +26,6 @@ module.exports = function(app) {
 
   app.get("/newClient", (req, res) => {
     // If user doesn't want to create a new contact, send them to members page
-    if (req.user) {
-      res.redirect("/members");
-    }
     res.sendFile(path.join(__dirname, "../public/newClient.html"));
   });
 
