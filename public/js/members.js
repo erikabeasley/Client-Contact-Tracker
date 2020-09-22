@@ -36,7 +36,6 @@ $(document).ready(() => {
     });
   };
   $(window).on("load", () => {
-
     $(".clientInfo").on("click", event => {
       event.preventDefault();
       console.log(this);
