@@ -6,7 +6,7 @@ module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
-  
+
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
@@ -25,6 +25,24 @@ module.exports = function(app) {
       title: req.body.title,
       email: req.body.email,
       password: req.body.password
+    })
+      .then(() => {
+        res.redirect(307, "/api/login");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
+
+  app.post("/api/createNew", (req, res) => {
+    console.log(req);
+    db.Client.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      title: req.body.title,
+      email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
+      company: req.body.company
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -55,17 +73,14 @@ module.exports = function(app) {
     }
   });
 
-
-// Route for getting client info
-app.get("/api/client/:info", function(req, res) {
-  Client.findAll({
-    where: {
-      title: req.params.info
-    }
-  }).then(function(results) {
-    res.json(results);
+  // Route for getting client info
+  app.get("/api/client/:info", (req, res) => {
+    Client.findAll({
+      where: {
+        title: req.params.info
+      }
+    }).then(results => {
+      res.json(results);
+    });
   });
-});
-
-
 };
