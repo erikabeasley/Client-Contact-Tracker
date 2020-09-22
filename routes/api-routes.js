@@ -72,7 +72,12 @@ module.exports = function(app) {
       });
     }
   });
-
+  //Route for all Clients
+  app.get("/api/allClients", (_req, res) => {
+    // sequelize code to find all clients, and return them to the user with res.json
+    db.Client.findAll({}).then(result => res.json(result));
+  });
+  
   // Route for getting client info
   app.get("/api/client/:info", (req, res) => {
     Client.findAll({

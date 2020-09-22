@@ -4,4 +4,12 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
+
+  const addClient = $("#addClient");
+
+  addClient.on("click", event => {
+    event.preventDefault();
+    window.location.replace("/newClient");
+    console.log("clicked");
+  });
 });
