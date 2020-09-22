@@ -9,7 +9,7 @@ $(document).ready(() => {
   const companyInput = $("input#company-input");
 
   // When the createNew button is clicked, we validate the email and password are not blank
-  createNewForm.on("submit", (event) => {
+  createNewForm.on("submit", event => {
     console.log("submit");
     event.preventDefault();
 
@@ -19,7 +19,7 @@ $(document).ready(() => {
       title: titleInput.val(), //probably don't need this
       email: emailInput.val().trim(),
       phoneNumber: phoneNumberInput.val().trim(),
-      company: companyInput.val().trim(),
+      company: companyInput.val().trim()
     };
 
     console.log(clientData);
@@ -76,7 +76,7 @@ $(document).ready(() => {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(JSON.stringify(err.responseJSON));
+    $("#alert .msg").text("not logged in", err.responseJSON);
     $("#alert").fadeIn(500);
   }
 });
