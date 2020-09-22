@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "mysqlpassword",
-    "database": "user",
+    "password": "Braves20!",
+    "database": "client_tracker_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
