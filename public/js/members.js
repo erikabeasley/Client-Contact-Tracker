@@ -1,5 +1,4 @@
 $(document).ready(() => {
- 
   const addClient = $("#addClient");
   const clientTable = $("#clientTable");
 
@@ -29,7 +28,7 @@ $(document).ready(() => {
       <tr class="clientInfo" data-id="${client.id}">
             <td>${client.firstName} ${client.lastName}</td>
             <td>${client.title}</td>
-            <td>${client.title}</td>
+            <td>${client.company}</td>
             <td>${client.email}</td>
       </tr>     
       `);
