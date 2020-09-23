@@ -67,14 +67,16 @@ $(document).ready(() => {
       email: email,
       phoneNumber: phoneNumber,
       company: company
-    }).then(() => {
-      window.location.replace("/members");
-      // If there's an error, handle it by throwing up a bootstrap alert
-    });
+    })
+      .then(() => {
+        window.location.replace("/members");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(handleLoginErr);
   }
 
-  // function handleLoginErr(err) {
-  //   $("#alert .msg").text("not logged in", err.responseJSON);
-  //   $("#alert").fadeIn(500);
-  // }
+  function handleLoginErr(err) {
+    $("#alert .msg").text(JSON.stringify(err.responseJSON));
+    $("#alert").fadeIn(500);
+  }
 });
