@@ -5,62 +5,99 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Connect</a>
+    <form class="form-inline">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
       </div>
-    </div>
+    </form>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <div class="card" style="width: 100%">
+        <div class="card-body">
+          <h5 class="card-title"><i class="far fa-user"></i><span class="member-name"> Name</span></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Job Title Maybe</h6>
+          <p class="card-text"></p>
+          <a href="#" class="card-link">Active</a>
+          <a href="#" class="card-link"></a>
+        </div>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Client One
+          <span class="badge badge-primary badge-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Client Two
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Client Three
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <div class="container-members">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3">
+            <h2 id="welcome-user">Welcome <span class="member-name"></span></h2>
+            <br>
+            <div class="dropdown">
+              <button id="clientList" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <!-- Need JS to make clients appear on dropdown -->
+                All Clients
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <!-- All Clients box -->
+            <div id="allClientsInfo">
+              <table class="table table-hover table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Email</th>
+                  </tr>
+                </thead>
+
+                <tbody id="clientTable">
+
+
+                </tbody>
+              </table>
+            </div>
+
+
+            <button id="addClient" class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
+              Add New Client
+            </button>
+          </div>
+          <br>
+        </div>
       </div>
     </div>
-    <br>
-    
-    <!-- All Clients box -->
-    <div class="row">
-      <Span>
-        <h2 class="text-center">All Clients</h2> 
-        <h4 class="text-right">Search Client     
-          <input id="searchBox" type="text" placeholder="Search.."><button id="searchSubmit">Search</button>
-        </h4> 
-      </Span> 
-
-    </div>
-    <div id="allClientsInfo">
-      <table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Title</th>
-            <th scope="col">Company</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
-        
-        <tbody id="clientTable">
-          
-          
-        </tbody>
-      </table>
-    </div>
-
-
-    <button id="addClient" class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
-      Add New Client
-    </button>
   </div>
-  <br>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
