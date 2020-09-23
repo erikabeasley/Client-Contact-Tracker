@@ -45,7 +45,7 @@ module.exports = function(app) {
       company: req.body.company
     })
       .then(() => {
-        res.redirect(307, "/api/login");
+        res.redirect(307, "/members");
       })
       .catch(err => {
         res.status(401).json(err);
@@ -62,6 +62,7 @@ module.exports = function(app) {
   app.get("/api/user_data", (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
+      console.log("user not logged in");
       res.json({});
     } else {
       // Otherwise send back the user's email and id
