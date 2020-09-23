@@ -6,47 +6,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Connect</a>
+    <form class="form-inline">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
       </div>
-    </div>
+    </form>
   </nav>
-  
   <div class="row">
     <div class="col-md-3 sidebar">
       <div class="card" style="width: 100%">
         <div class="card-body">
-          <h5 class="card-title"><span class="member-name"></span></h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <h5 class="card-title"><i class="far fa-user"></i><span class="member-name"> Name</span></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Job Title Maybe</h6>
+          <p class="card-text"></p>
+          <a href="#" class="card-link">Active</a>
+          <a href="#" class="card-link"></a>
         </div>
       </div>
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Cras justo odio
+          Client One
           <span class="badge badge-primary badge-pill">14</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Dapibus ac facilisis in
+          Client Two
           <span class="badge badge-primary badge-pill">2</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          Morbi leo risus
+          Client Three
           <span class="badge badge-primary badge-pill">1</span>
         </li>
       </ul>

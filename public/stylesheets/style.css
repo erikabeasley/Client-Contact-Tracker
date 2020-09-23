@@ -10,13 +10,13 @@ body {
   -o-background-size: cover;
   background-size: cover; 
 }
-
 .container {
   margin-top: 100px;
   background-color: white;
   border-radius: 7px;
 }
 
+/* Login Page */
 #login-container {
   padding: 100px;
   padding-bottom: 100px;
@@ -28,7 +28,6 @@ body {
   border-radius: 70%;
   margin-top: 28%;   
 }
-
 .infoForm-group {
   font-size: 20px;
   color: white;
@@ -50,7 +49,7 @@ h2 {
   color:  rgb(119, 0, 216)
 
 }
-#button-pretty {
+#login-btn {
   width: 100%;
   background-color: rgb(253, 108, 82);
   font-size: 20px;
@@ -59,9 +58,21 @@ h2 {
   color: white;
 }
 
+/* Signup Page */
+#signup-container {
+  width: max-content;
+  padding: 150px;
+}
+#signup-btn {
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 100px;
+  color: white;
+}
 
 /* Members Page */
-
 .sidebar {
   background-color: white;
 }
@@ -82,7 +93,7 @@ h2 {
 #allClientsInfo {
   height:500px;
   width:100%px;
-  border:1px solid rgb(114, 114, 114);
+  border:1px solid rgb(133, 133, 133);
   border-radius: 7px;
   background-color: rgb(247, 244, 244);
   font-size:20px;
@@ -93,8 +104,8 @@ h2 {
   background-color: rgb(218, 218, 218);
 }
 
-.btn, #addClient {
-  background-color: rgb(46, 45, 45);
+#addClient, #clientList {
+  background-color: rgb(48, 48, 48);
   font-size: 20px;
   padding: 15px;
   border-radius: 7px;
