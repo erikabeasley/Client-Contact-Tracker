@@ -26,10 +26,12 @@ module.exports = function(app) {
 
   app.get("/newClient", (req, res) => {
     // If user doesn't want to create a new contact, send them to members page
-    if (req.user) {
-      res.redirect("/members");
-    }
     res.sendFile(path.join(__dirname, "../public/newClient.html"));
+  });
+
+  //forgot password
+  app.get("/resetPass", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/resetPass.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
