@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-  <title>New Clinet Page</title>
+  <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -18,36 +22,36 @@
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container" id="newClient-container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Add New Client</h2>
         <form class="createNew">
-          <div class="form-group">
-            
+          <div class="form-group mt-10">
+
             <input type="text" class="form-control" id="firstName-input" placeholder="First Name">
           </div>
-          <div class="form-group">
-            
+          <div class="form-group mt-10">
+
             <input type="text" class="form-control" id="lastName-input" placeholder="Last Name">
           </div>
-          <div class="form-group">
-            
+          <div class="form-group mt-10">
+
             <input type="text" class="form-control" id="title-input" placeholder="Job Title">
           </div>
-          <div class="form-group">
-           
+          <div class="form-group mt-10">
+
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
-          <div class="form-group">
-            
+          <div class="form-group mt-10">
+
             <input type="phoneNumber" class="form-control" id="phoneNumber-input" placeholder="Phone Number">
           </div>
-          <div class="form-group">
-            
+          <div class="form-group mt-10">
+
             <input type="text" class="form-control" id="company-input" placeholder="Company Name">
           </div>
-          
+
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>

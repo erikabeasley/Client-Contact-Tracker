@@ -1,7 +1,3 @@
-form.signup,
-form.login {
-  margin-top: 50px;
-}
 body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEMtqpxUilzOEnEeouvBdUyaPa88fbGy9epw&usqp=CAU");
   /* background-color: rgb(165, 70, 255); */
@@ -15,11 +11,33 @@ body {
   background-color: white;
   border-radius: 7px;
 }
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+.form-group {
+  margin: 0px;
+}
+.form-control{
+  border-radius: 100px;
+  padding: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: rgb(226, 226, 226);
+}
 
 /* Login Page */
+#login-page {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEMtqpxUilzOEnEeouvBdUyaPa88fbGy9epw&usqp=CAU");
+  /* background-color: rgb(165, 70, 255); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
 #login-container {
   padding: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   width: 60%;
 }
 #user-login-img {
@@ -33,12 +51,6 @@ body {
   color: white;
   font-weight: 300px;
 }
-.form-control{
-  border-radius: 100px;
-  padding: 25px;
-  font-weight: bold;
-  font-size: 15px;
-}
 .navbar {
   background-color: white;
 }
@@ -46,31 +58,46 @@ h2 {
   font-weight: bold;
   margin-top: 40px;
   text-align: center;
-  color:  rgb(119, 0, 216)
+  color:  rgb(55, 45, 61)
 
 }
 #login-btn {
   width: 100%;
   background-color: rgb(253, 108, 82);
-  font-size: 20px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 12px;
   border-radius: 100px;
   color: white;
+  margin-top: 30px;
 }
 
 /* Signup Page */
-#signup-container {
-  width: max-content;
-  padding: 150px;
+#signup-page, #resetPass-page {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEMtqpxUilzOEnEeouvBdUyaPa88fbGy9epw&usqp=CAU");
+  /* background-color: rgb(165, 70, 255); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
-#signup-btn {
-  width: 100%;
+#signup-container {
+  width: 60%;
+  padding-top: 30px;
+  padding-right: 180px;
+  padding-left: 180px;
+  padding-bottom: 50px;
+}
+#signup-btn, #reset-btn {
+  width: 30%;
   background-color: rgb(48, 48, 48);
   font-size: 20px;
   padding: 15px;
-  margin: 5px;
+  margin-top: 45px;
   border-radius: 100px;
   color: white;
+}
+.mt-10 {
+  margin-top: 10px;
 }
 
 /* Members Page */
@@ -111,4 +138,15 @@ h2 {
   padding: 15px;
   border-radius: 7px;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+/* Reset password Page */
+#resetPass-container {
+  text-align: center;
+  padding: 100px;
+  width: 60%;
+}
+
+
