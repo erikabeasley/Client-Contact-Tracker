@@ -29,6 +29,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/newClient.html"));
   });
 
+  app.get("/clientInfo", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/clientInfo.html"));
+  });
+
   //forgot password
   app.get("/resetPass", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/resetPass.html"));
