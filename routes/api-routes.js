@@ -36,6 +36,14 @@ module.exports = function(app) {
 
   app.post("/api/createNew", (req, res) => {
     console.log(req);
+    db.Notes.create({
+      createdBy: req.body.createdBy,
+      body: req.body.body
+    });
+  });
+
+  app.post("/api/createNew", (req, res) => {
+    console.log(req);
     db.Client.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,

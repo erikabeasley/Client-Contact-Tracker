@@ -45,7 +45,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // Add a belongsTo association to Authors here
+  Client.associate = function(models) {
+    // Associating Client with Notes
+    // When an Client is deleted, also delete any associated Notes
+    Client.hasMany(models.Notes, {
+      onDelete: "cascade"
+    });
+  };
+
+  // Add a belongsTo association to Clients here
   // Example: https://github.com/sequelize/express-example/blob/master/models/task.js
   return Client;
 };
