@@ -84,10 +84,10 @@ module.exports = function(app) {
   });
 
   // Route for getting client info
-  app.get("/api/client/:info", (req, res) => {
-    Client.findAll({
+  app.get("/api/client/info/:id", (req, res) => {
+    db.Client.findOne({
       where: {
-        title: req.params.info
+        id: req.params.id
       }
     }).then(results => {
       res.json(results);

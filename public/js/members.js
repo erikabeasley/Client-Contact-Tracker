@@ -33,8 +33,8 @@ $(document).ready(() => {
     console.log(clients);
     clients.forEach(client => {
       clientTable.append(`
-      <tr class="clientInfo" data-id="${client.id}">
-            <td>${client.firstName} ${client.lastName}</td>
+      <tr class="clientInfo" href-data="/clientInfo/?id=${client.id}">
+            <td><a href="/clientInfo?id=${client.id}"> ${client.firstName} ${client.lastName}</a></td>
             <td>${client.title}</td>
             <td>${client.company}</td>
             <td>${client.email}</td>
@@ -60,20 +60,22 @@ $(document).ready(() => {
 
     relevantClients.forEach(client => {
       clientTable.append(`
-      <tr class="clientInfo" data-id="${client.id}">
-            <td>${client.firstName} ${client.lastName}</td>
+      <tr class="clientInfo" href-data="/client/info/?id=${client.id}">
+            <td><a href="/client/info?id=${client.id}">${client.firstName} ${client.lastName}</a></td>
             <td>${client.title}</td>
             <td>${client.company}</td>
             <td>${client.email}</td>
       </tr>     
       `);
-    })
+    });
   };
 
   $(window).on("load", () => {
+    console.log("page loaded");
     $(".clientInfo").on("click", event => {
+      console.log("clicked");
       event.preventDefault();
-      console.log(this);
+      console.log($(this));
     });
   });
 });
