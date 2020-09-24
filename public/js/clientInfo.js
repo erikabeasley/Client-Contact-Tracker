@@ -12,10 +12,18 @@ $(document).ready(() => {
     // Not sure what to put where it says 'data.email'
     $("#name").text(data.firstName + " " + data.lastName);
     $("#title").text(data.title);
-
     $("#company").text(data.company);
     $("#email").text(data.email);
     $("#phoneNumber").text(data.phoneNumber);
 
+    $("#noteSubmit").on("click", event => {
+      event.preventDefault();
+      $.post("/api/notes", {
+        createdBy: data.firstName + " " + data.lastName,
+        noteBody: $("#noteBody").val(),
+        clientId: clientId
+      });
+    });
   });
+
 });

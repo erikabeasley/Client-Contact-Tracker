@@ -34,11 +34,12 @@ module.exports = function(app) {
       });
   });
 
-  app.post("/api/createNew", (req, res) => {
+  app.post("/api/notes", (req, res) => {
     console.log(req);
     db.Notes.create({
       createdBy: req.body.createdBy,
-      body: req.body.body
+      body: req.body.noteBody,
+      ClientId: req.body.clientId
     });
   });
 
@@ -51,13 +52,7 @@ module.exports = function(app) {
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
       company: req.body.company
-    })
-      // .then(() => {
-      //   res.redirect(307, "/api/createNew");
-      // })
-      // .catch(err => {
-      //   res.status(401).json(err);
-      // });
+    });
   });
 
   // Route for logging user out
@@ -96,6 +91,17 @@ module.exports = function(app) {
     db.Client.findOne({
       where: {
         id: req.params.id
+      }
+    }).then(results => {
+      res.json(results);
+    });
+  });
+
+  //Route for notes
+  app.get("/api/notes/:id", (_req, res) => {
+    db.Notes.findAll({
+      where: {
+        ClientId: req.params.id
       }
     }).then(results => {
       res.json(results);
