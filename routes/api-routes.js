@@ -44,12 +44,12 @@ module.exports = function(app) {
       phoneNumber: req.body.phoneNumber,
       company: req.body.company
     })
-      .then(() => {
-        res.redirect(307, "/members");
-      })
-      .catch(err => {
-        res.status(401).json(err);
-      });
+      // .then(() => {
+      //   res.redirect(307, "/api/createNew");
+      // })
+      // .catch(err => {
+      //   res.status(401).json(err);
+      // });
   });
 
   // Route for logging user out
