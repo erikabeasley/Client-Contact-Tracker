@@ -7,24 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
 
 <body id="resetPass-page">
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Connect</a>
-    <form class="form-inline">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+      COOL NAME HERE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
       </div>
-    </form>
+    </div>
+    <span class="navbar-text">
+      <a class="navbar-brand" href="#">Login</a>
+    </span>
   </nav>
   <div class="container" id="resetPass-container">
     <div class="row">
@@ -37,7 +41,7 @@
             <input type="email" class="form-control" id="email-input" placeholder="&#xf007;  Email"
               style="font-family: FontAwesome;">
           </div>
-          <br/>
+          <br />
           <button id="reset-btn" type="submit" class="btn">Send Reset Email</button>
         </form>
         <br />
@@ -45,6 +49,7 @@
     </div>
   </div>
 
+  <script src="https://kit.fontawesome.com/b521208c3b.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/resetpass.js"></script>
 
