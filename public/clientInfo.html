@@ -14,23 +14,24 @@
 </head>
 
 <body id="clientInfo-page">
-  <nav class="navbar navbar-expand-lg">
-    <span class="navbar-brand">
-        <!-- <img src="#" width="30" height="30" class="d-inline-block align-top" alt=""> -->
-        Connect</span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active navbar-brand" href="/members">Home <span class="sr-only">(current)</span></a>
-      </div>
-    </div>
-    <span class="navbar-text">
-      <a class="navbar-brand" href="/logout">Logout</a>
-    </span>
-  </nav>
+    <nav class="navbar navbar-expand-lg">
+        <span class="navbar-brand">
+            <!-- <img src="#" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+            Connect</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active navbar-brand" href="/members">Home <span
+                        class="sr-only">(current)</span></a>
+            </div>
+        </div>
+        <span class="navbar-text">
+            <a class="navbar-brand" href="/logout">Logout</a>
+        </span>
+    </nav>
     <div class="container">
         <h1 style="text-align: center; color: rgb(55, 45, 61);">Client Info</h1>
         <div class="card align-items-center">
@@ -44,7 +45,7 @@
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-facebook"></i></a>
-        </br>
+            </br>
             <p><button id="contactBtn">Contact</button> <button id="delClient" type="submit">Delete</button></p>
             <p></p>
         </div>
@@ -54,12 +55,13 @@
             <input type="text" rows="5" id="noteBody" name="noteBody" style="width: 100%; height: 100px">
             <p><button id="noteSubmit">Submit</button></p>
         </form>
-
+        </br>
         <div id="notesDisplay">
+            <h4>Notes:</h4>
             <hr>
             <span class="row text-center">
                 <p id="createdBy">Santiago solana: </p>
-            </br>
+                </br>
                 <h5 id="note"> Spoke about purchasing new item</h5>
             </span>
             <hr>
