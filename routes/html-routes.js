@@ -44,7 +44,7 @@ module.exports = function(app) {
   });
 
   //Contact Form route for sending messages to clients
-  app.get("/clientContact", (req, res) => {
+  app.get("/contactForm", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/contactForm.html"));
   });
 };
