@@ -29,7 +29,7 @@ $(document).ready(() => {
     console.log("clicked");
   });
 
-  // Function for displaying our clients
+  // Funtion for displaying our clients
   const displayAllClients = clients => {
     console.log(clients);
     clients.forEach(client => {
@@ -39,7 +39,7 @@ $(document).ready(() => {
             <td>${client.title}</td>
             <td>${client.company}</td>
             <td>${client.email}</td>
-      </tr>
+      </tr>     
       `);
     });
   };
@@ -61,8 +61,8 @@ $(document).ready(() => {
 
     relevantClients.forEach(client => {
       clientTable.append(`
-      <tr class="clientInfo" href-data="/clientInfo/?id=${client.id}">
-            <td><a href="/clientInfo?id=${client.id}">${client.firstName} ${client.lastName}</a></td>
+      <tr class="clientInfo" href-data="/client/info/?id=${client.id}">
+            <td><a href="/client/info?id=${client.id}">${client.firstName} ${client.lastName}</a></td>
             <td>${client.title}</td>
             <td>${client.company}</td>
             <td>${client.email}</td>
