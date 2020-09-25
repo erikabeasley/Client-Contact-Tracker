@@ -28,7 +28,7 @@ module.exports = function(app) {
   });
 
   // Route for getting client info
-  //when js send this request, go to db and find entry where id is = to # 
+  //when js send this request, go to db and find entry where id is = to #
   app.get("/api/client/:id", (req, res) => {
     db.Client.findOne({
       where: {
@@ -38,4 +38,4 @@ module.exports = function(app) {
       res.json(results);
     });
   });
-}
+};
