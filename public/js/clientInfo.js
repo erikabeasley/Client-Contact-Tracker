@@ -1,8 +1,8 @@
 $(document).ready(() => {
   const noteSubmit = $("#noteSubmit");
+  const delClient = $("#delClient");
   // const noteDisplay = $("#notesDisplay");
   const url = window.location.search;
-  const delClient = $("#delClient");
   let clientId;
   console.log(url);
   if (url.indexOf("?id=") !== -1) {
@@ -12,20 +12,26 @@ $(document).ready(() => {
 
   $.get("/api/allClients").then(clients => {
     console.log(clients);
+    console.log("client id:" + clientId);
+
     const specifiedClient = clients.filter(client => {
-      return client.id === clientId;
+      return client.id === parseInt(clientId);
     });
-    console.log("specified Clients:  " + specifiedClient);
-    $("#name").text(specifiedClient.firstName + " " + specifiedClient.lastName);
-    $("#title").text(specifiedClient.title);
-    $("#company").text(specifiedClient.company);
-    $("#email").text(specifiedClient.email);
-    $("#phoneNumber").text(specifiedClient.phoneNumber);
+
+    console.log(specifiedClient);
+    $("#name").text(
+      specifiedClient[0].firstName + " " + specifiedClient[0].lastName
+    );
+    $("#title").text(specifiedClient[0].title);
+    $("#company").text(specifiedClient[0].company);
+    $("#email").text(specifiedClient[0].email);
+    $("#phoneNumber").text(specifiedClient[0].phoneNumber);
 
     noteSubmit.on("click", event => {
       event.preventDefault();
       $.post("/api/notes", {
-        createdBy: specifiedClient.firstName + " " + specifiedClient.lastName,
+        createdBy:
+          specifiedClient[0].firstName + " " + specifiedClient[0].lastName,
         noteBody: $("#noteBody").val(),
         clientId: clientId
       });

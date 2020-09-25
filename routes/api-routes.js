@@ -125,15 +125,9 @@ module.exports = function(app) {
     });
   });
 
-<<<<<<< HEAD
-  //Route for notes
-  app.get("/api/notes/:id", (_req, res) => {
-    db.Notes.findAll({
-=======
   //DELETE route for deleting clients
   app.delete("/api/client/:id", (req, res) => {
     db.Client.destroy({
->>>>>>> cd09d20dd6266db093df8c2b14b5aa6e2ddfcf1b
       where: {
         id: req.params.id
       }
