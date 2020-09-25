@@ -18,7 +18,7 @@ form.login {
   padding: 28px;
   font-weight: bold;
   font-size: 15px;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(231, 229, 229);
 }
 
 /* Login Page */
@@ -197,6 +197,28 @@ tr {
 }
 
 /* Client Info Page */
+#noteBody {
+  border-radius: 10px;
+  border: none;
+  background-color:  rgb(247, 244, 244);
+  padding: 10px;
+}
+#noteSubmit {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(253, 108, 82);
+  margin-top: 15px;
+  color: white;
+  padding: 10px;
+}
+#contact-btn, #delClient {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(253, 108, 82);
+  margin-top: 15px;
+  color: white;
+  padding: 10px;
+}
 
 /* Add Client Page */
 #jumboclient-btn {
