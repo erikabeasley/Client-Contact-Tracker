@@ -211,7 +211,7 @@ tr {
   color: white;
   padding: 10px;
 }
-#contact-btn, #delClient {
+#contactBtn, #delClient {
   border-radius: 10px;
   border: none;
   background-color: rgb(253, 108, 82);

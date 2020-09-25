@@ -37,6 +37,12 @@ $(document).ready(() => {
     });
   });
 
+ $("#contactBtn").on("click", event => {
+    event.preventDefault();
+    window.location = "/contactForm?id=" + clientId;
+    console.log("clicked");
+  });
+
   const displayNotes = notes => {
     noteDisplay.empty();
     notes.forEach(note => {
