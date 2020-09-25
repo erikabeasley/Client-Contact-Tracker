@@ -97,16 +97,38 @@ h2 {
 }
 
 /* Members Page */
+.navbar {
+  background-color: rgb(91, 0, 177);
+}
+.navbar-brand{
+  color: aliceblue;
+}
 #members-page, #newClient-page, #clientInfo-page {
-  background-color: rgb(226, 210, 255);
+  background-color: rgb(255, 255, 255);
+}
+.jumbotron {
+  padding: 10px;
+}
+#searchBox {
+  border-radius: 80px;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: rgb(226, 226, 226);
 }
 #searchSubmit {
-  border-radius: 7px;
+  background-color: white;
+  border: none;
+
 }
 .sidebar {
   background-color: white;
+  border: rgb(55, 45, 61);
 }
-
+.badge {
+  background-color: rgb(253, 108, 82);;
+}
 #welcome-user {
   color: rgb(44, 17, 87);
 }
@@ -134,13 +156,17 @@ h2 {
 }
 
 #addClient, #clientList {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(48, 0, 104);
   font-size: 20px;
   padding: 15px;
   border-radius: 7px;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.table {
+  color: rgb(219, 219, 219);
+  background-color: rgb(48, 0, 104);
 }
 
 /* Reset password Page */

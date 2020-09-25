@@ -14,16 +14,17 @@
 </head>
 
 <body id="members-page">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#"><img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
       COOL NAME HERE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link active navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link navbar-brand" href="#">Features</a>
       </div>
     </div>
     <span class="navbar-text">
@@ -62,11 +63,9 @@
         <div class="row">
           <div class="col-md-9 col-md-offset-3">
             <div class="jumbotron jumbotron-fluid">
-              <div class="container">
-                <h1 class="display-4" id="welcome-user">Welcome <span class="member-name"></span></h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                </p>
-              </div>
+              <h1 class="display-4" id="welcome-user">Welcome <span class="member-name"></span></h1>
+              <p class="lead">Your space to connect to clients.
+              </p>
             </div>
             <br>
             <div class="dropdown">
@@ -81,14 +80,14 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-            <h3 class="text-right">Search for a client:</h3>
-            <h4 class="text-right">
-              <input id="searchBox" type="text" placeholder="Search"><button id="searchSubmit">Search</button>
-            </h4>
+            <h4 class="text-right">Search for a client:</h4>
+            <h3 class="text-right">
+              <input id="searchBox" type="text" placeholder="Search"><button id="searchSubmit"><i class="fas fa-search"></i></button>
+            </h3>
 
             <!-- All Clients box -->
             <div id="allClientsInfo">
-              <table class="table table-hover table-dark">
+              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">Name</th>
@@ -117,7 +116,7 @@
   </div>
 
 
-
+  <script src="https://kit.fontawesome.com/b521208c3b.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
 
