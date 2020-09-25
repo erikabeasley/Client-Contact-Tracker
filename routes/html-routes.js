@@ -26,16 +26,10 @@ module.exports = function(app) {
 
   app.get("/newClient", (req, res) => {
     // If user doesn't want to create a new contact, send them to members page
+    if (req.user) {
+      res.redirect("/members");
+    }
     res.sendFile(path.join(__dirname, "../public/newClient.html"));
-  });
-
-  app.get("/clientInfo", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/clientInfo.html"));
-  });
-
-  //forgot password
-  app.get("/resetPass", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/resetPass.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
@@ -47,5 +41,10 @@ module.exports = function(app) {
   // After selecting client on members page, you are then taken to client page where you can get contact info
   app.get("/clientInfo", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/clientInfo.html"));
+  });
+
+  //Contact Form route for sending messages to clients
+  app.get("/clientContact", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/contactForm.html"));
   });
 };
