@@ -93,4 +93,15 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+
+  //DELETE route for deleting clients
+  app.delete("/api/client/:id", (req, res) => {
+    db.Client.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(results => {
+      res.json(results);
+    });
+  });
 };
