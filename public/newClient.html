@@ -24,17 +24,23 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link navbar-brand" href="#">Features</a>
       </div>
     </div>
     <span class="navbar-text">
       <a class="navbar-brand" href="#">Logout</a>
     </span>
   </nav>
-  <div class="container" id="newClient-container">
+  <div id="newClient-container" class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Add to My Client List</h1>
+      <p class="lead">Your space to add clients.</p>
+      <hr class="my-4">
+      <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a id="jumboclient-btn" class="btn btn-lg" href="#" role="button">Learn more</a> -->
+  </div>
     <div class="row">
       <div class="col-md-12">
-        <h2>Add New Client</h2>
+        <h3>Client Information</h3>
         <form class="createNew">
           <div class="form-group mt-10">
 
@@ -65,7 +71,7 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Save Contact</button>
+          <button id="newclient-btn" type="submit" class="btn btn-default">Save Contact</button>
         </form>
         <br />
       </div>

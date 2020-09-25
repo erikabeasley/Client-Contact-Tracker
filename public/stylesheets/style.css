@@ -18,7 +18,7 @@ form.login {
   padding: 28px;
   font-weight: bold;
   font-size: 15px;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(231, 229, 229);
 }
 
 /* Login Page */
@@ -76,7 +76,7 @@ h2 {
   -o-background-size: cover;
   background-size: cover; 
 }
-#signup-container, #newClient-container {
+#signup-container {
   width: 60%;
   padding-top: 30px;
   padding-right: 180px;
@@ -129,8 +129,13 @@ h2 {
 }
 .badge {
   color: aliceblue;
-  background-color: rgb(253, 108, 82);;
+  background-color: rgb(253, 108, 82);
 }
+#addClient, #addsomething {
+  color:  rgb(253, 108, 82);
+  background-color: white;
+  border: none;
+} 
 #welcome-user {
   color: rgb(74, 9, 134);
 }
@@ -157,7 +162,7 @@ h2 {
   background-color: rgb(218, 218, 218);
 }
 
-#addClient, #clientList {
+#clientList {
   background-color:  rgb(103, 10, 190);
   font-size: 20px;
   padding: 15px;
@@ -166,9 +171,13 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.table {
+tr {
   color: rgb(219, 219, 219);
   background-color:  rgb(103, 10, 190);
+}
+#clientTable {
+  background-color: rgb(219, 219, 219);
+  color: rgb(74, 9, 134);
 }
 
 /* Reset password Page */
@@ -187,6 +196,51 @@ h2 {
   color: white;
 }
 
+/* Client Info Page */
+#noteBody {
+  border-radius: 10px;
+  border: none;
+  background-color:  rgb(247, 244, 244);
+  padding: 10px;
+}
+#noteSubmit {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(253, 108, 82);
+  margin-top: 15px;
+  color: white;
+  padding: 10px;
+}
+#contactBtn, #delClient {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(253, 108, 82);
+  margin-top: 15px;
+  color: white;
+  padding: 10px;
+}
+
+/* Add Client Page */
+#jumboclient-btn {
+  background-color: rgb(253, 108, 82);
+}
+#newClient-container {
+  width: 100%;
+  margin: 0px;
+  padding-top: 0px;
+  padding-right: 180px;
+  padding-left: 180px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#newclient-btn {
+  border-radius: 100px;
+  background-color: rgb(253, 108, 82);
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+}
 
 /* Container for flexboxes */
 .row {
