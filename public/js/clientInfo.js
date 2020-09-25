@@ -45,6 +45,12 @@ $(document).ready(() => {
   //   $("#email").text(data.email);
   //   $("#phoneNumber").text(data.phoneNumber);
 
+ $("#contactBtn").on("click", event => {
+    event.preventDefault();
+    window.location = "/contactForm?id=" + clientId;
+    console.log("clicked");
+  });
+
   delClient.on("click", event => {
     event.preventDefault();
     handleDeleteButtonPress();
