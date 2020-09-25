@@ -6,6 +6,7 @@ $(document).ready(() => {
   // API call for accesing user_data
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.firstName + " " + data.lastName);
+    $(".member-title").text(data.title);
   });
 
   // API call for accesing all clients data
