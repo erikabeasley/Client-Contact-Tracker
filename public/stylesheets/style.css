@@ -171,9 +171,13 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.table {
+tr {
   color: rgb(219, 219, 219);
   background-color:  rgb(103, 10, 190);
+}
+#clientTable {
+  background-color: rgb(219, 219, 219);
+  color: rgb(74, 9, 134);
 }
 
 /* Reset password Page */
