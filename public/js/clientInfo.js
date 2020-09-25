@@ -2,6 +2,7 @@ $(document).ready(() => {
   const noteSubmit = $("#noteSubmit");
   // const noteDisplay = $("#notesDisplay");
   const url = window.location.search;
+  const delClient = $("#delClient");
   let clientId;
   console.log(url);
   if (url.indexOf("?id=") !== -1) {
@@ -38,23 +39,15 @@ $(document).ready(() => {
   //   $("#email").text(data.email);
   //   $("#phoneNumber").text(data.phoneNumber);
 
-  //   noteSubmit.on("click", event => {
-  //     event.preventDefault();
-  //     $.post("/api/notes", {
-  //       createdBy: data.firstName + " " + data.lastName,
-  //       noteBody: $("#noteBody").val(),
-  //       clientId: clientId
-  //     });
-  //   });
-  // });
-
-  // const displayNotes = (client, notes) => {
-  //   notes.forEach(note => {
-  //     noteDisplay.append(`
-  //     <hr>
-  //       <span class="row text-center"><p id="createdBy">${client}:   </p><h5 id="note">${note}</h5></span>
-  //       <hr>
-  //     `);
-  //   });
-  // }
+  delClient.on("click", event => {
+    event.preventDefault();
+    handleDeleteButtonPress();
+    console.log("clicked");
+  });
+  function handleDeleteButtonPress() {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/client/" + clientId
+    }).then((window.location = "/members"));
+  }
 });

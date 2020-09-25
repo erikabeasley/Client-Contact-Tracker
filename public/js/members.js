@@ -28,7 +28,7 @@ $(document).ready(() => {
     console.log("clicked");
   });
 
-  // Funtion for displaying our clients
+  // Function for displaying our clients
   const displayAllClients = clients => {
     console.log(clients);
     clients.forEach(client => {
@@ -38,7 +38,7 @@ $(document).ready(() => {
             <td>${client.title}</td>
             <td>${client.company}</td>
             <td>${client.email}</td>
-      </tr>     
+      </tr>
       `);
     });
   };
