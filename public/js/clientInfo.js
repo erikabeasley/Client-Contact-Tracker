@@ -1,5 +1,6 @@
 $(document).ready(() => {
   const url = window.location.search;
+  const delClient = $("#delClient");
   let clientId;
   console.log(url);
   if (url.indexOf("?id=") !== -1) {
@@ -16,6 +17,17 @@ $(document).ready(() => {
     $("#company").text(data.company);
     $("#email").text(data.email);
     $("#phoneNumber").text(data.phoneNumber);
-
   });
+
+  delClient.on("click", event => {
+    event.preventDefault();
+    handleDeleteButtonPress();
+    console.log("clicked");
+  });
+  function handleDeleteButtonPress() {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/client/" + clientId
+    }).then((window.location = "/members"));
+  }
 });
