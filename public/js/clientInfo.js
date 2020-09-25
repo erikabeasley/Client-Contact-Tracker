@@ -13,7 +13,6 @@ $(document).ready(() => {
     $.get("/api/allClients").then(clients => {
       console.log(clients);
       console.log("client id:" + clientId);
-  
       const specifiedClient = clients.filter(client => {
         return client.id === parseInt(clientId);
       });
@@ -38,7 +37,7 @@ $(document).ready(() => {
     });
   });
 
-  const displayNotes = (notes) => {
+  const displayNotes = notes => {
     noteDisplay.empty();
     notes.forEach(note => {
       noteDisplay.append(`
