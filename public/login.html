@@ -5,33 +5,31 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
 
 </head>
 
 <body id="login-page">
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Connect</a>
-    <form class="form-inline">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </form>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand"><img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Connect</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </nav>
   <div class="container" id="login-container">
     <div class="row">
-      <div class="col-md-6">
-        <img id="user-login-img" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/mobile-login-interface-1681234-1427611.png" alt="User Login"
-          width="300" height="300">
+      <div class="column filter-image" class="col-md-6">
+        <img id="user-login-img"
+          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/mobile-login-interface-1681234-1427611.png"
+          alt="User Login">
       </div>
-      <div class="col-md-6">
+      <div class="column" class="col-md-6">
         <h2>Member Login</h2>
         <form class="login">
 
@@ -48,12 +46,13 @@
           <button type="submit" class="btn" id="login-btn">LOGIN</button>
         </form>
         <form class="forgotpass">
-        <p style="text-align: center;"><button type="submit" class="btn">Forgot Password?</button></p>
+          <p style="text-align: center;"><button type="submit" class="btn">Forgot Password?</button></p>
         </form>
-        <br/>
-        <br/>
-        <br/>
-        <p style="text-align: center;">Create your account <a href="/signup.html"> <i class="fas fa-arrow-right"></i></a></p>
+        <br />
+        <br />
+        <br />
+        <p style="text-align: center;">Create your account <a href="/signup.html"> <i
+              class="fas fa-arrow-right"></i></a></p>
       </div>
     </div>
   </div>
