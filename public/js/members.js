@@ -9,7 +9,7 @@ $(document).ready(() => {
   });
 
   // API call for accesing all clients data
-  $.get("/api/allClients").then(data =>{
+  $.get("/api/allClients").then(data => {
     console.log(data);
     displayAllClients(data);
 

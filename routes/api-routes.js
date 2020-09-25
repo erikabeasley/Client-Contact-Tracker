@@ -11,7 +11,7 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id,
+      id: req.user.id
     });
   });
 
@@ -24,26 +24,26 @@ module.exports = function(app) {
       lastName: req.body.lastName,
       title: req.body.title,
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
     })
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch((err) => {
+      .catch(err => {
         res.status(401).json(err);
       });
   });
 
-  app.post("/api/notes", (req, res) => {
+  app.post("/api/notes", req => {
     console.log(req);
     db.Notes.create({
       createdBy: req.body.createdBy,
       body: req.body.noteBody,
-      ClientId: req.body.clientId,
+      ClientId: req.body.clientId
     });
   });
 
-  app.post("/api/createNew", (req, res) => {
+  app.post("/api/createNew", req => {
     console.log(req);
     db.Client.create({
       firstName: req.body.firstName,
@@ -51,7 +51,7 @@ module.exports = function(app) {
       title: req.body.title,
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
-      company: req.body.company,
+      company: req.body.company
     });
   });
 
@@ -75,7 +75,7 @@ module.exports = function(app) {
         id: req.user.id,
         firstName: req.user.firstName,
         lastName: req.user.lastName,
-        title: req.user.title,
+        title: req.user.title
       });
     }
   });
@@ -83,35 +83,56 @@ module.exports = function(app) {
   //Route for all Clients
   app.get("/api/allClients", (_req, res) => {
     // sequelize code to find all clients, and return them to the user with res.json
-    db.Client.findAll({}).then((result) => res.json(result));
+    db.Client.findAll({
+      include: [db.Notes]
+    }).then(client => {
+      const resObj = client.map(client => {
+        return Object.assign(
+          {},
+          {
+            id: client.id,
+            firstName: client.firstName,
+            lastName: client.lastName,
+            title: client.title,
+            email: client.email,
+            phoneNumber: client.phoneNumber,
+            company: client.company,
+            notes: client.Notes.map(note => {
+              return Object.assign(
+                {},
+                {
+                  createdBy: note.createdBy,
+                  body: note.body,
+                  clientId: note.ClientId
+                }
+              );
+            })
+          }
+        );
+      });
+      res.json(resObj);
+    });
   });
 
   // Route for getting client info
   app.get("/api/client/info/:id", (req, res) => {
     db.Client.findOne({
       where: {
-        id: req.params.id,
-      },
-      include: [db.Notes],
-    }).then((results) => {
+        id: req.params.id
+      }
+    }).then(results => {
       res.json(results);
     });
   });
 
   //Route for notes
-  app.get("/api/notes", (_req, res) => {
-    const query = {};
-    if (req.query.id) {
-      query.ClientId = req.query.id;
-    }
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Client
+  app.get("/api/notes/:id", (_req, res) => {
     db.Notes.findAll({
-      where: query,
-      include: [db.Client]
-    }).then(dbNotes => {
-      res.json(dbNotes);
+      where: {
+        id: req.params.id
+      }
+    }).then(results => {
+      res.json(results);
     });
   });
 };
