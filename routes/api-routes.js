@@ -34,7 +34,16 @@ module.exports = function(app) {
       });
   });
 
-  app.post("/api/createNew", (req, res) => {
+  app.post("/api/notes", req => {
+    console.log(req);
+    db.Notes.create({
+      createdBy: req.body.createdBy,
+      body: req.body.noteBody,
+      ClientId: req.body.clientId
+    });
+  });
+
+  app.post("/api/createNew", req => {
     console.log(req);
     db.Client.create({
       firstName: req.body.firstName,
@@ -43,13 +52,7 @@ module.exports = function(app) {
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
       company: req.body.company
-    })
-      .then(() => {
-        res.redirect(307, "/members");
-      })
-      .catch(err => {
-        res.status(401).json(err);
-      });
+    });
   });
 
   // Route for logging user out
@@ -80,7 +83,35 @@ module.exports = function(app) {
   //Route for all Clients
   app.get("/api/allClients", (_req, res) => {
     // sequelize code to find all clients, and return them to the user with res.json
-    db.Client.findAll({}).then(result => res.json(result));
+    db.Client.findAll({
+      include: [db.Notes]
+    }).then(client => {
+      const resObj = client.map(client => {
+        return Object.assign(
+          {},
+          {
+            id: client.id,
+            firstName: client.firstName,
+            lastName: client.lastName,
+            title: client.title,
+            email: client.email,
+            phoneNumber: client.phoneNumber,
+            company: client.company,
+            notes: client.Notes.map(note => {
+              return Object.assign(
+                {},
+                {
+                  createdBy: note.createdBy,
+                  body: note.body,
+                  clientId: note.ClientId
+                }
+              );
+            })
+          }
+        );
+      });
+      res.json(resObj);
+    });
   });
 
   // Route for getting client info
