@@ -1,10 +1,5 @@
 body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEMtqpxUilzOEnEeouvBdUyaPa88fbGy9epw&usqp=CAU");
-  /* background-color: rgb(165, 70, 255); */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
+  font-family: 'Roboto', sans-serif;
 }
 .container {
   margin-top: 100px;
@@ -40,11 +35,12 @@ form.login {
   padding-bottom: 10px;
   width: 60%;
 }
+.filter-image {
+  text-align: center;
+  max-width: 100%;
+}
 #user-login-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 70%;
-  margin-top: 28%;   
+  margin-top: 30%;   
 }
 .infoForm-group {
   font-size: 20px;
@@ -101,12 +97,18 @@ h2 {
 }
 
 /* Members Page */
+#members-page, #newClient-page, #clientInfo-page {
+  background-color: rgb(226, 210, 255);
+}
+#searchSubmit {
+  border-radius: 7px;
+}
 .sidebar {
   background-color: white;
 }
 
 #welcome-user {
-  color: white;
+  color: rgb(44, 17, 87);
 }
 
 .container-members {
@@ -120,8 +122,7 @@ h2 {
 }
 #allClientsInfo {
   height:500px;
-  width:100%px;
-  border:1px solid rgb(133, 133, 133);
+  width:100%;
   border-radius: 7px;
   background-color: rgb(247, 244, 244);
   font-size:20px;
@@ -150,3 +151,93 @@ h2 {
 }
 
 
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 50%;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 1400px) {
+  #signup-btn {
+    width: 50%;
+  }
+}
+
+/* On screens that are 1024px wide or less, go from four columns to two columns */
+@media screen and (max-width: 1024px) {
+  .column {
+    flex: 50%;
+  }
+  #signup-container {
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+  }  .row {
+    flex-direction: column;
+  }
+  #login-container {
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+  }
+  #user-login-img {
+    margin-top: 5%; 
+    padding: 20px;  
+  }
+  #signup-container {
+    padding-top: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 15px;
+  }
+  #signup-btn {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 920px) {
+  .row {
+    flex-direction: column;
+  }
+  #login-container {
+    padding: 40px;
+    padding-bottom: 10px;
+    width: 90%;
+  }
+  #user-login-img {
+    margin-top: 5%; 
+    padding: 50px;  
+  }
+  #signup-container {
+    padding-top: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 15px;
+  }
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 540px) {
+  .row {
+    flex-direction: column;
+  }
+  #login-container {
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+  }
+  #user-login-img {
+    margin-top: 5%; 
+    padding: 20px;  
+  }
+}
