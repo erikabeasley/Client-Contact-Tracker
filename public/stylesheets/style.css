@@ -40,7 +40,8 @@ form.login {
   max-width: 100%;
 }
 #user-login-img {
-  margin-top: 30%;   
+  margin-top: 30%; 
+    
 }
 .infoForm-group {
   font-size: 20px;
@@ -102,6 +103,9 @@ h2 {
 }
 .navbar-brand{
   color: aliceblue;
+}
+.content-right {
+  float: right;
 }
 #members-page, #newClient-page, #clientInfo-page {
   background-color: rgb(255, 255, 255);
@@ -221,6 +225,9 @@ tr {
 }
 
 /* Add Client Page */
+#jumbo-addClient {
+  color: rgb(74, 9, 134);
+}
 #jumboclient-btn {
   background-color: rgb(253, 108, 82);
 }
@@ -235,6 +242,26 @@ tr {
 }
 
 #newclient-btn {
+  border-radius: 100px;
+  background-color: rgb(253, 108, 82);
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Contact Page */ 
+#contactForm-container {
+  border-radius: 10px;
+  border: rgb(231, 229, 229);
+  padding: 10px;
+}
+#text-area-control {
+  border-radius: 10px;
+  border: none;
+  background-color:  rgb(247, 244, 244);
+  padding: 10px;
+}
+#sendMsg {
   border-radius: 100px;
   background-color: rgb(253, 108, 82);
   color: white;

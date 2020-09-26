@@ -49,14 +49,14 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
           Add New Client
           <button id="addClient" class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-plus"></i>
+            <i class="fas fa-plus"></i>
           </button>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           Add Something Else
           <button id="addsomething" class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-plus"></i>
-            </button>
+          </button>
         </li>
       </ul>
     </div>
@@ -65,9 +65,16 @@
         <div class="row">
           <div class="col-md-9 col-md-offset-3">
             <div class="jumbotron jumbotron-fluid">
-              <h1 class="display-4" id="welcome-user">Welcome <span class="member-name"></span></h1>
-              <p class="lead">Your space to connect to clients.
-              </p>
+              <div class="row">
+                <div class="col-md-9">
+                  <h1 class="display-4" id="welcome-user">Welcome <span class="member-name"></span></h1>
+                  <p class="lead">Your space to connect to clients.</p>
+                </div>
+                <div class="col-md-3">
+                  <!-- <img class="content-right"
+                    src="https://cdn.iconscout.com/icon/premium/png-128-thumb/user-1681224-1427601.png"> -->
+                </div>
+              </div>
             </div>
             <br>
             <div class="dropdown">
@@ -84,7 +91,8 @@
             </div>
             <h4 class="text-right">Search for a client:</h4>
             <h3 class="text-right">
-              <input id="searchBox" type="text" placeholder="Search"><button id="searchSubmit"><i class="fas fa-search"></i></button>
+              <input id="searchBox" type="text" placeholder="Search"><button id="searchSubmit"><i
+                  class="fas fa-search"></i></button>
             </h3>
 
             <!-- All Clients box -->
