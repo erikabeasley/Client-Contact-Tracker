@@ -47,7 +47,12 @@ $(document).ready(() => {
     noteDisplay.empty();
     notes.forEach(note => {
       noteDisplay.append(`
-      <span class="row text-center"><p id="createdBy">${note.createdBy}:  </p><h5 id="note">${note.body}</h5></span>
+      <div class="note-container">
+      <h5 id="createdBy">${note.createdBy}:</h5>
+        <p>${note.body}</p>
+        <span class="time-right">${note.createdAt}</span>
+      </div>
+      
       `);
     });
   };
