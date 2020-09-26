@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "mysqlpassword",
+    "password": "root",
     "database": "client_tracker_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -15,6 +15,10 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "username": "dny069ssipx65ueq",
+    "password": "let0yme56j3xdxag",
+    "database": "pr6ek49ektle77dn",
+    "host": "sm9j2j5q6c8bpgyq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"
   }
 }
