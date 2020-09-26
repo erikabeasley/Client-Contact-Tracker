@@ -103,7 +103,8 @@ module.exports = function(app) {
                 {
                   createdBy: note.createdBy,
                   body: note.body,
-                  clientId: note.ClientId
+                  clientId: note.ClientId,
+                  createdAt: note.createdAt
                 }
               );
             })
