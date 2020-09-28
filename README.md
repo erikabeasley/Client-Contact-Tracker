@@ -3,6 +3,8 @@
 ## Concept
 - An application that tracks the contact points made by employees of an orginization. It allows the user to create new contacts, keep track of existing contacts, and stale inactive contacts. Additionally, the application keeps track of sent messages between contacts, and allows the user to add notes detailing conversations. The objective of this application is to create a cohesive space where the user can maintain record of contacts and conversations to avoid overlap, and allow collaboration.
 
+Here is a link to our deployed application: [Client Contact Tracker](https://blooming-eyrie-04708.herokuapp.com/)
+
 API's
 - FullContact
 - SendGrid 
